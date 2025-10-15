@@ -1,0 +1,28 @@
+{
+  "name": "@workshop/backend",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/infrastructure/server/fastify.ts",
+    "build": "tsc",
+    "start": "node dist/infrastructure/server/fastify.js",
+    "lambda:build": "esbuild src/infrastructure/aws/lambda-handler.ts --bundle --platform=node --target=node18 --outfile=dist/lambda.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.910.0",
+    "@aws-sdk/client-sns": "^3.910.0",
+    "@fastify/cors": "^11.1.0",
+    "@fastify/helmet": "^13.0.2",
+    "aws-lambda": "^1.0.7",
+    "drizzle-orm": "^0.44.6",
+    "fastify": "^5.6.1",
+    "postgres": "^3.4.7",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.155",
+    "@types/node": "^24.7.2",
+    "esbuild": "^0.25.11",
+    "tsx": "^4.20.6"
+  }
+}
