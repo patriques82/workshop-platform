@@ -1,7 +1,4 @@
-import type {
-  Workshop,
-  CreateWorkshopInput,
-} from "../../../../../../packages/types/src/workshop.js";
+import type { Workshop, CreateWorkshopInput } from "@workshop/types";
 import * as workshopRepo from "../repositories/workshop-repository.js";
 
 export async function createWorkshop(

@@ -1,5 +1,5 @@
 import type { FastifyRequest, FastifyReply } from "fastify";
-import type { CreateWorkshopInput } from "../../../../../../packages/types/src/workshop.js";
+import type { CreateWorkshopInput } from "@workshop/types";
 import * as workshopService from "../services/workshop-service.js";
 
 export async function createWorkshopHandler(
